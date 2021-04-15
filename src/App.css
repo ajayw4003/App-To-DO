@@ -12,7 +12,7 @@
 .app{
   position: relative;
   text-align: center;
-  width: 30%;
+  width: 50%;
   height: 80vh;
   margin-bottom: 30px;
   margin-top: 20px;
@@ -53,6 +53,8 @@
   background: #ff8882;
 }
 .list-item{
+  display: flex;
+  flex-direction: row;
   text-align: center;
   margin-top: 20px;
   margin-left: 4%;
@@ -68,15 +70,15 @@
 
 }
 .list input, .editTask{
-  height: 40px;
-  width: 76%;
+  height: 37px;
+  width: 57%;
   outline: none;
   border: none;
   font-size: large;
   border: 2px solid #9dbeb9;
 }
 .editTask{
-  width: 90%;
+  width: 80%;
   font-size: x-large;
 }
 button, .saveTask{
@@ -93,4 +95,16 @@ button, .saveTask{
 }
 button:hover{
   background: #ff8882;
+}
+
+.row{
+  width: 40%;
+  border: 2px solid #9dbeb9;
+}
+
+.currentDragging{
+  border: 2px solid #e91466;
+}
+.pending{
+  list-style: none;
 }
