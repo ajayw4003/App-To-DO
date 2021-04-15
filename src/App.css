@@ -1,0 +1,96 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFC2B4;
+  min-height: 100vh;
+}
+.app{
+  position: relative;
+  text-align: center;
+  width: 30%;
+  height: 80vh;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  background-color: #194350;
+  border-radius: 10px;
+  box-shadow: 10px, 30px, 40px rgba(0, 0, 0, 0.8);
+}
+.heading{
+  font-weight: 600;
+  padding: 15px;
+}
+
+.form{
+  display: flex;
+  margin-top: 15px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.task{
+  display: flex;
+  width: 60%;
+  height: 30px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  font-size: x-large;
+}
+.btn{
+  height: 40px;
+  width: 70px;
+  margin-left: 10px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+.btn:hover{
+  background: #ff8882;
+}
+.list-item{
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 4%;
+  width: 90%;
+}
+.list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  border: 2px solid #9dbeb9;
+  border-radius: 5px;
+
+}
+.list input, .editTask{
+  height: 40px;
+  width: 76%;
+  outline: none;
+  border: none;
+  font-size: large;
+  border: 2px solid #9dbeb9;
+}
+.editTask{
+  width: 90%;
+  font-size: x-large;
+}
+button, .saveTask{
+  height: 40px;
+  width: 40px;
+  outline: none;
+  border: none;
+}
+.saveTask{
+  width: 60px;
+}
+.fa{
+  font-size: large;
+}
+button:hover{
+  background: #ff8882;
+}
