@@ -102,57 +102,44 @@ function App() {
 					/>
 
 				<div className = "list-item">
-          <div className = "row">
-            <h3>Tasks To Do</h3>
-            {todos.map((item, i) => (
-              <li key = {i} className = "list">
-                {item.isEdit ? 
-                  (<>
-                    <textarea 
-                      type = "text" 
-                      value = {item.listItem} 
-                      onChange = {(e) =>edited(e.target.value, item.id)}
-                      className = "editTask"
-                      />
-                    <button 
-                      onClick = {() =>handleSave(item.id, item.listItem)} 
-                      className = "saveTask">Save
-                    </button>
-                  </>): 
-                  (<>
-                    <input value = {item.listItem} onChange = {(e) => e.prevenDefault()} draggable/>
-                    <div>
-                      <button 
-                        className = "delete" 
-                        onClick = {() =>handleDelete(item.id)}>
-                        <i className="fa fa-trash"></i>
-                      </button>
-                      <button 
-                        className = "edit" 
-                        onClick = {() =>handleEdit(item.id)}>
-                        <i className="fa fa-pencil-square-o"></i>
-                      </button>
-                    </div>
-                  </>)
-                }
-                
-              
-              </li>
-            ))}
-            </div>
-            <div className = "row">
-                <h3>Pending Tasks</h3>
-                <li className = "pending" draggable>
-
-                </li>
-            </div>
-            <div className = "row">
-              <h3>Done</h3>
-            </div>
-				</div>
-				
+					{todos.map((item, i) => (
+					<li key = {i} className = "list">
+						{item.isEdit ? 
+						(<>
+							<textarea 
+							type = "text" 
+							value = {item.listItem} 
+							onChange = {(e) =>edited(e.target.value, item.id)}
+							className = "editTask"
+							/>
+							<button 
+							onClick = {() =>handleSave(item.id, item.listItem)} 
+							className = "saveTask">Save
+							</button>
+						</>): 
+						(<>
+							<input value = {item.listItem} onChange = {(e) => e.prevenDefault()} draggable/>
+							<div className = "buttons">
+								<button 
+									className = "delete" 
+									onClick = {() =>handleDelete(item.id)}>
+									<i className="fa fa-trash"></i>
+								</button>
+								<button 
+									className = "edit" 
+									onClick = {() =>handleEdit(item.id)}>
+									<i className="fa fa-pencil-square-o"></i>
+								</button>
+							</div>
+						</>)
+						}
+						
+					
+					</li>
+					))}
+            	</div>
 			</div>
-			
+				
 		</div>
 	);
 };
